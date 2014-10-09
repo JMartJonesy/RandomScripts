@@ -23,7 +23,7 @@ def regex( string, pattern ):
 					sIndex += 1
 				pIndex += 2
 			else:
-				if sVal != patternVal and ((sIndex - 1 ) > 0 and (pIndex - 2) > 0) and patternVal[pIndex - 1] == '*' and patternVal[pIndex - 2] != string[sIndex - 1]:
+				if sVal != patternVal and                                                          ((sIndex - 1) > 0 and                                                           (pIndex - 2) > 0) and                                                           patternVal[pIndex - 1] == '*' and                                              patternVal[pIndex - 2] != string[sIndex - 1]:
 					return False
 				if sVal == patternVal:
 					sIndex += 1
