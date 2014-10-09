@@ -23,10 +23,11 @@ def regex( string, pattern ):
 					sIndex += 1
 				pIndex += 2
 			else:
-				if sVal != patternVal:
+				if sVal != patternVal and ((sIndex - 1 ) > 0 and (pIndex - 2) > 0) and patternVal[pIndex - 1] == '*' and patternVal[pIndex - 2] != string[sIndex - 1]:
 					return False
-				sIndex += 1
+				if sVal == patternVal:
+					sIndex += 1
 				pIndex += 1
 	return (sIndex ==  len(string) and pIndex == len(pattern))
 
-print(regex("aaii1", "a*[a-z].[1-9]"))
+print(regex("aaai1", "a*a.[1-9]"))
