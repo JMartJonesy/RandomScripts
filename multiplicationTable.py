@@ -1,3 +1,5 @@
+import sys
+
 def multiTable(maxVal):
 	padding = len(str(maxVal*maxVal))
 	for i in range ( 1, maxVal + 1):
@@ -6,4 +8,4 @@ def multiTable(maxVal):
 			print(val.rjust(padding), end=" ")
 		print()
 
-multiTable(12)
+multiTable(int(sys.argv[1]))
