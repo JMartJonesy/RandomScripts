@@ -1,4 +1,4 @@
 RandomScripts
 =============
 
-Random Scripts are used for this or that reason
+Random Scripts made for this or that reason
